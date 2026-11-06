@@ -24,3 +24,46 @@ assert describe_driver("Alex Albon", "Williams", 23, 100.22) == \
     "Alex Albon is #23 driver for Williams. Lap time: 100.22 seconds."
 
 print(describe_driver("Alex Albon", "Williams", 23, 100.22))
+
+# count the items by looping
+def len(items):
+    count = 0
+
+    for item in items:
+        count += 1
+    return count
+
+print(len(items=["Charles Leclerc", "Max Verstappen", "Alex Albon", "Carlos Sainz", "Kimi Antonelli"]))
+
+# keep a running total
+def sum(items):
+    total = 0
+
+    for item in items:
+        total += item
+    return total
+
+print(sum(items=[78.13, 55.34, 100.22]))
+
+# start with the first item, compare each one
+def min(items):
+    lowest = items[0]
+
+    for item in items:
+        if lowest > item:
+            lowest = item
+    return(f"{lowest} is the minimum.")
+
+print(min(items=[78.13, 55.34, 100.22]))
+    
+
+# same, opposite comparison
+def max(items):
+    highest = items[0]
+
+    for item in items:
+        if highest < item:
+            highest = item
+    return(f"{highest} is the max.")
+
+print(max(items=[78.13, 55.34, 100.22]))
