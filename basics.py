@@ -4,7 +4,11 @@
 # returns a formatted sentence
 
 
-def describe_driver(name: str, team: str, number: int, lap_time: float) -> None:
-    print(f"{name} is #{number} driver for {team}. His lap time is: {lap_time} seconds.")
+def describe_driver(name: str, team: str, number: int, lap_time: float) -> str:
+    return(f"{name} is #{number} driver for {team}. Lap time: {lap_time} seconds.")
 
-describe_driver("Charles Leclerc", "Ferrari", 16, 78.13)
+# check / test
+assert describe_driver("Charles Leclerc", "Ferrari", 16, 78.13) == \
+    "Charles Leclerc is #16 driver for Ferrari. Lap time: 78.13 seconds."
+
+print(describe_driver("Charles Leclerc", "Ferrari", 16, 78.13))
